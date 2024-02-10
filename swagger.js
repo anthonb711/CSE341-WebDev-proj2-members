@@ -3,9 +3,11 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'MEMBERS API',
-    description: 'Description'
+    description: 'Description',
+    version: '1.0.1'
   },
-  host: 'agbwebdev-proj2.onrender.com'
+  host: 'agbwebdev-proj2.onrender.com',
+  schemes: ['http', 'https']
 };
 
 const outputFile = './swagger-output.json';
