@@ -82,7 +82,7 @@ GET https://agbwebdev-proj2.onrender.com/members/65bd92a6bd1ba965479e00ca HTTP/1
 //*****************//
 
 ### CREATE A NEW MEMBER
-POST https://agbwebdev-proj2.onrender.com/member HTTP/1.1
+POST https://agbwebdev-proj2.onrender.com/members HTTP/1.1
 Content-Type: application/json
 
 {
