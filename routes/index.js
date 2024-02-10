@@ -3,6 +3,7 @@ const controller = require('../controllers/indexController');
 
 routes.get('/', controller.getHome);
 
-// router.use('/<endpoint>', require(./'<endpoint>'));
+routes.use('/profile', require('./profile'));
+routes.use('/members', require('./members'));
 
 module.exports =  routes;

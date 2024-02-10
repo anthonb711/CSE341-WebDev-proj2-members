@@ -55,14 +55,14 @@ DELETE http://localhost:8080/members/65bd91c1bd1ba965479e00c9 HTTP/1.1
 //*****************//
 
 ### HOME
-GET https://agbwebdev.onrender.com/ HTTP/1.1
+GET https://agbwebdev-proj2.onrender.com/ HTTP/1.1
 
 
 ### GET ALL MEMBERS FROM DB
-GET https://agbwebdev.onrender.com/member HTTP/1.1
+GET https://agbwebdev-proj2.onrender.com/member HTTP/1.1
 
 ### GET ONE MEMBER FROM DB BY ID
-GET https://agbwebdev.onrender.com/member/65bd92a6bd1ba965479e00ca HTTP/1.1
+GET https://agbwebdev-proj2.onrender.com/member/65bd92a6bd1ba965479e00ca HTTP/1.1
 
 
 
@@ -72,7 +72,7 @@ GET https://agbwebdev.onrender.com/member/65bd92a6bd1ba965479e00ca HTTP/1.1
 //*****************//
 
 ### CREATE A NEW MEMBER
-POST http://agbwebdev.onrender.com/member HTTP/1.1
+POST https://agbwebdev-proj2.onrender.com/member HTTP/1.1
 Content-Type: application/json
 
 {
@@ -84,7 +84,7 @@ Content-Type: application/json
 //*****************//
 
 ### UDPATE A MEMBER BY ID
-PUT http://agbwebdev.onrender.com/member/65bdcaeb186a26f2c177cb6e HTTP/1.1
+PUT https://agbwebdev-proj2.onrender.com/member/65bdcaeb186a26f2c177cb6e HTTP/1.1
 content-type: application/json
 
 {
@@ -96,4 +96,4 @@ content-type: application/json
 //*****************//
 
 ### DELETE A CONTACT BY ID
-DELETE http://agbwebdev.onrender.com/member/65bd98376580f07dd911819f HTTP/1.1
+DELETE https://agbwebdev-proj2.onrender.com/member/65bd98376580f07dd911819f HTTP/1.1

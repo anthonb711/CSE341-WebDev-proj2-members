@@ -5,7 +5,7 @@ const doc = {
     title: 'MEMBERS API',
     description: 'Description'
   },
-  host: 'agbwebdev.onrender.com'
+  host: 'aggwebdev-proj2.onrender.com'
 };
 
 const outputFile = './swagger-output.json';
