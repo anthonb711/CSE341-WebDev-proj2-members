@@ -17,7 +17,7 @@ routes.put('/:id', controller.updateMemberRecord);
 /* routes.put('/:id', controller.updateMemberPrayerDate; */
 /* routes.put('/:id', controller.updateMemberTalkDate);  */
 
-/* routes.delete('/:id', controller.deleteMember); */
+routes.delete('/:id', controller.deleteMember);
 
 
 

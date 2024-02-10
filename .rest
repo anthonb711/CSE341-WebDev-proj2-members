@@ -41,7 +41,7 @@ PUT http://localhost:8080/members/65c7c5448205e862271b10e3 HTTP/1.1
 Content-Type: application/json
 
 {
-  "age": "20"
+  "age": "25"
 }
 
 //*****************//
