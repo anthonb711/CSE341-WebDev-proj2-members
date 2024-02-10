@@ -86,7 +86,7 @@ const deleteMember = async (req, res) => {
     const memberId = req.params.id;
 
     try {
-        const deletedMember = await Member.deleteOne({ _id: memberId });
+        const deletedMember = await Member.findOneAndDelete({ _id: memberId });
         res.sendStatus(200);
     } catch (error) {
         res.status(500).json({ error: error.message });
