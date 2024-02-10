@@ -10,7 +10,6 @@ routes.get('/:id', controller.getMemberById);
 /* routes.get('/', controller.getMemberByLname); */
 /* routes.get('/', controller.getMemberByFname); */
 
-
 routes.post('/', controller.addMember);
 
 routes.put('/:id', controller.updateMemberRecord);
@@ -18,8 +17,5 @@ routes.put('/:id', controller.updateMemberRecord);
 /* routes.put('/:id', controller.updateMemberTalkDate);  */
 
 routes.delete('/:id', controller.deleteMember);
-
-
-
 
 module.exports = routes;
