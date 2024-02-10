@@ -59,10 +59,10 @@ GET https://agbwebdev-proj2.onrender.com/ HTTP/1.1
 
 
 ### GET ALL MEMBERS FROM DB
-GET https://agbwebdev-proj2.onrender.com/member HTTP/1.1
+GET https://agbwebdev-proj2.onrender.com/members HTTP/1.1
 
 ### GET ONE MEMBER FROM DB BY ID
-GET https://agbwebdev-proj2.onrender.com/member/65bd92a6bd1ba965479e00ca HTTP/1.1
+GET https://agbwebdev-proj2.onrender.com/members/65bd92a6bd1ba965479e00ca HTTP/1.1
 
 
 
