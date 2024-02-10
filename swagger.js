@@ -7,7 +7,7 @@ const doc = {
     version: '1.0.1'
   },
   host: 'agbwebdev-proj2.onrender.com',
-  schemes: ['http', 'https']
+  schemes: ['https']
 };
 
 const outputFile = './swagger-output.json';
