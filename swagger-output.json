@@ -103,6 +103,55 @@
             "description": "Internal Server Error"
           }
         }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lname": {
+                  "example": "any"
+                },
+                "fname": {
+                  "example": "any"
+                },
+                "gender": {
+                  "example": "any"
+                },
+                "age": {
+                  "example": "any"
+                },
+                "lastPrayer": {
+                  "example": "any"
+                },
+                "lastTalk": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     }
   }

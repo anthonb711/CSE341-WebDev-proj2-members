@@ -52,6 +52,32 @@ const addMember = async (req, res) => {
 
 /* routes.put('/:id', controller.updateMemberRecord);    */
 
+const updateMemberRecord = async (req, res) => {
+    const memberId = req.params.id;
+    try {
+        const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
+        const memberUpdate = await Member.findOneAndUpdate(
+            {_id: memberId},
+            {
+                lname,
+                fname,
+                gender,
+                age,
+                lastPrayer,
+                lastTalk
+            },
+            {new: true }
+            );
+        if (!memberUpdate) {
+            return res.status(404).json({ error: 'Member not found' });
+        }
+
+        res.sendStatus(204);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
 //DELETES
 
 /* routes.delete('/:id', controller.deleteMember); */
@@ -60,6 +86,14 @@ module.exports = {
     getMembers,
     getMemberById,
     addMember,
-    /* updateMemberRecord, */
+    updateMemberRecord,
     /* deleteMember, */
  };
+
+
+ /* try {
+        res.status(204).json(insertedUpdate);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    } 
+*/

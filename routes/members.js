@@ -13,7 +13,7 @@ routes.get('/:id', controller.getMemberById);
 
 routes.post('/', controller.addMember);
 
-/* routes.put('/:id', controller.updateMemberRecord);    */
+routes.put('/:id', controller.updateMemberRecord);
 /* routes.put('/:id', controller.updateMemberPrayerDate; */
 /* routes.put('/:id', controller.updateMemberTalkDate);  */
 
