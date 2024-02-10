@@ -5,17 +5,19 @@ const cors = require('cors');
 const mongodb = require('./db/connect');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDoc = require('./swagger-output.json');
+const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3000;
 
 
 
 // Middleware
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
-app.use(cors());
-
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app
+    .use(cors())
+    .use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc))
+    .use(bodyParser.json())
+    .use(express.json())
+    .use(express.urlencoded({extended: true}));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -36,7 +38,7 @@ mongodb.initDb((err) => {
     console.log(err);
   } else {
     app.listen(port);
-    console.log('Connected to MongoDB');
+   // console.log('Connected to MongoDB');
     console.log(`Web Server is listneing at port  + ${port}`);
   }
 });
