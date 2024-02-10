@@ -37,7 +37,7 @@ const addMember = async (req, res) => {
     });
 
     const insertedMember = await member.save();
-    res.status(201).json(insertedMember);
+    res.status(201).json(insertedMember._id);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
