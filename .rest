@@ -24,9 +24,9 @@ Content-Type: application/json
 
 {
 "lname": "Brown",
-  "fname": "Jenna",
-  "gender": "F",
-  "age": "29",
+  "fname": "Jaden",
+  "gender": "M",
+  "age": "21",
   "lastPrayer": "2024-02-10T12:00:00Z",
   "lastTalk": "2017-08-13T12:00:00Z"
 }

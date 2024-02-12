@@ -1,13 +1,11 @@
-//const dotenv = require('dotenv').config();
 const express = require('express');
-const app = express();
 const cors = require('cors');
 const mongodb = require('./db/connect');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDoc = require('./swagger-output.json');
 const bodyParser = require('body-parser');
-
 const port = process.env.PORT || 3000;
+const app = express();
 
 // Middleware
 app

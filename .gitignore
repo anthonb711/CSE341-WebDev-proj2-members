@@ -3,5 +3,7 @@
 node_modules
 *.txt
 .eslintrc
+.eslintignore
+.prettierignore
 .prettierrc
 .DS_Store
