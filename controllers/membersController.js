@@ -1,3 +1,4 @@
+const ObjectId = require('mongodb').ObjectId;
 const Member = require('../db/memberSchema');
 
 //GETTERS
@@ -13,7 +14,10 @@ const getMembers = async (req, res) => {
 };
 
 const getMemberById = async (req, res) => {
-  const memberId = req.params.id;
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Invalid ID');
+  }
+  const memberId = new ObjectId(req.params.id);
   try {
     const thisMember = await Member.findById(memberId);
     res.status(200).json(thisMember);
@@ -45,10 +49,12 @@ const addMember = async (req, res) => {
 
 // PUTS
 
-/* routes.put('/:id', controller.updateMemberRecord);    */
-
 const updateMemberRecord = async (req, res) => {
-  const memberId = req.params.id;
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Invalid ID');
+  }
+  const memberId = new ObjectId(req.params.id);
+  console.log(req.params.id);
   try {
     const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
     const memberUpdate = await Member.findOneAndUpdate(
@@ -75,10 +81,11 @@ const updateMemberRecord = async (req, res) => {
 
 //DELETES
 
-/* routes.delete('/:id', controller.deleteMember); */
-
 const deleteMember = async (req, res) => {
-  const memberId = req.params.id;
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Invalid ID');
+  }
+  const memberId = new ObjectId(req.params.id);
 
   try {
     await Member.findOneAndDelete({ _id: memberId });
@@ -95,10 +102,3 @@ module.exports = {
   updateMemberRecord,
   deleteMember
 };
-
-/* try {
-        res.status(204).json(insertedUpdate);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    } 
-*/

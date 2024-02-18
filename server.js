@@ -34,7 +34,6 @@ mongodb.initDb((err) => {
     console.log(err);
   } else {
     app.listen(port);
-    // console.log('Connected to MongoDB');
     console.log(`Web Server is listneing at port  + ${port}`);
   }
 });
