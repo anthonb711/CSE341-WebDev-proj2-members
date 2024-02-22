@@ -1,10 +1,12 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const mongodb = require('./db/connect');
+const connectDB = require('./db/connect');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDoc = require('./swagger-output.json');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
+
 const app = express();
 
 // Middleware
@@ -26,14 +28,10 @@ app.use((req, res, next) => {
   next();
 });
 
+// Set Routes
 app.use('/', require('./routes'));
 
 // Connect to DB
-mongodb.initDb((err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    app.listen(port);
-    console.log(`Web Server is listneing at port  + ${port}`);
-  }
-});
+connectDB();
+
+app.listen(port);
