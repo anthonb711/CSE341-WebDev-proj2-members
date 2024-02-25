@@ -14,8 +14,13 @@
     "/": {
       "get": {
         "description": "",
-        "parameters": [
-          {"person": "any"}],
+ "parameters": [
+          {
+            "name": "person",
+            "in": "query",
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
