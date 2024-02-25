@@ -14,6 +14,8 @@
     "/": {
       "get": {
         "description": "",
+        "parameters": [
+          {"person": "any"}],
         "responses": {
           "200": {
             "description": "OK"
