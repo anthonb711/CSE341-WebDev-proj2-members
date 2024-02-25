@@ -8,6 +8,9 @@
 ### HOME
 GET http://localhost:8080/ HTTP/1.1
 
+### HOME
+GET http://localhost:8080/?person=ANTHON BROWN HTTP/1.1
+
 ### GET ALL MEMBERS FROM DB
 GET http://localhost:8080/members HTTP/1.1
 
@@ -59,8 +62,11 @@ DELETE http://localhost:8080/members/65c7c5d78205e862271b10e5 HTTP/1.1
 //   RENDER GETS
 //*****************//
 
-### HOME
+### HOME NO QUERY VAILDATION
 GET https://agbwebdev-proj2.onrender.com/ HTTP/1.1
+
+### HOME QUERY VAILDATION
+GET http://agbwebdev-proj2.onrender.com/?person=ANTHON BROWN HTTP/1.1
 
 
 ### GET ALL MEMBERS FROM DB
