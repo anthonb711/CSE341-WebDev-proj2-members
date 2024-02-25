@@ -1,5 +1,5 @@
 const routes = require('express').Router();
-const { query } = require ('express-validator');
+const { query } = require('express-validator');
 const controller = require('../controllers/indexController');
 
 routes.get('/', query('person'), controller.getHome);

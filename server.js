@@ -1,4 +1,5 @@
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./db/connect');
@@ -21,7 +22,8 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
     'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept, Z-Key');
+    'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
+  );
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, FETCH');
   next();
