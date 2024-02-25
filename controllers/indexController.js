@@ -1,9 +1,10 @@
-const { validationResult } = require ('express-validator');
+const { validationResult, matchedData } = require ('express-validator');
 
 const getHome = (req, res) => {
-    const result = validationResult(req);
+    const result = validationResult(req); // returns 'true' if no errors areound in the validation
     if (result.isEmpty()) {
-        return res.send(`Hello, ${req.query.person} from Index Controller!`);
+        const data = matchedData(req); // this pulls in all the fields of the query as an obj
+        return res.send(`Hello, ${data.person} from Index Controller!`);
     }
      res.send({errors : result.array() });
 };
