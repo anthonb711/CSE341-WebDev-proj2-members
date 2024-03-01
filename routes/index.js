@@ -1,17 +1,19 @@
 const routes = require('express').Router();
 const { query } = require('express-validator');
- const { requiresAuth } = require('express-openid-connect');
+
+ const { auth, requiresAuth } = require('express-openid-connect');
+ const config = require('../config/auth0');
 const controller = require('../controllers/indexController');
-const config = require('../config/0auth');
+
+
+routes.use(auth(config));
 
 
 
-
-
-routes.get('/', query('person'), controller.getHome);
-routes.use('/profile',  require('./profile'));
-routes.use('/members', require('./members'));
-routes.use('/oauth', require('./oauth'));
+routes.get('/', controller.getHome);
+routes.use('/profile', requiresAuth(),  require('./profile'));
+routes.use('/members', requiresAuth(), require('./members'));
+routes.use('/auth0', require('./auth0'));
 
 
 
