@@ -1,6 +1,7 @@
 //const { validationResult, matchedData } = require('express-validator');
 
 const getHome = (req, res) => {
+      // #swagger.tags = ['Home']
     res.setHeader('Content-Type', 'text/html');
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 
