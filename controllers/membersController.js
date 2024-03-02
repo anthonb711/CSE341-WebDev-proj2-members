@@ -15,6 +15,7 @@ const getMembers = async (req, res) => {
 };
 
 const getMemberById = async (req, res) => {
+    // #swagger.tags = ['Members']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }

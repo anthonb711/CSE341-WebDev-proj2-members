@@ -15,6 +15,7 @@ const getFamilies = async (req, res) => {
 };
 
 const getFamilyById = async (req, res) => {
+    // #swagger.tags = ['Families']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
