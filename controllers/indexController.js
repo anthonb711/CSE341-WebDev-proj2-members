@@ -1,6 +1,7 @@
 //const { validationResult, matchedData } = require('express-validator');
 
 const getHome = (req, res) => {
+    res.setHeader('Content-Type', 'text/html');
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
   //   const result = validationResult(req); // returns 'true' if no errors are found in the validation
   //   if (result.isEmpty()) {
