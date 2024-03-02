@@ -18,15 +18,13 @@ const app = express();
 //   issuerBaseURL: process.env.ISSUER_BASE_URL
 // };
 
-
 // Middleware
 app
   .use(cors())
   .use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc))
   .use(express.json())
   .use(express.urlencoded({ extended: true }));
- // .use(auth(config));
-
+// .use(auth(config));
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -38,7 +36,6 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, FETCH');
   next();
 });
-
 
 // Set Routes
 app.use('/', require('./routes'));
