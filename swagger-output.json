@@ -7,32 +7,66 @@
   },
   "host": "agbwebdev-proj2.onrender.com",
   "basePath": "/",
+  "tags": [
+    {
+    "name": "Home",
+    "description": "Home Page"
+    },
+     {
+    "name": "Profile",
+    "description": "User Profile Page"
+    },
+    {
+    "name": "Members",
+    "description": "Member Collection CRUD OPS"
+    },
+    {
+    "name": "Family",
+    "description": "Families Collection CRUD OPS"
+    },
+    {
+    "name": "Ordinances",
+    "description": "Families Collection CRUD OPS"
+    },
+    {
+    "name": "Callings",
+    "description": "Callings Collection CRUD OPS"
+    }
+  ],
   "schemes": [
     "https"
   ],
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "tags" : ["Home"],
+        "description": "Login in Status",
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "PAGE NOT FOUND"
           }
         }
       }
     },
     "/profile/": {
       "get": {
-        "description": "",
+        "tags": ["Profile"],
+        "description": "User Info",
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "PAGE NOT FOUND"
           }
-        }
       }
     },
     "/members/": {
       "get": {
+        "tags": ["Members Collection"],
         "description": "",
         "responses": {
           "200": {
@@ -44,6 +78,7 @@
         }
       },
       "post": {
+        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -86,6 +121,7 @@
     },
     "/members/{id}": {
       "get": {
+        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -102,12 +138,16 @@
           "400": {
             "description": "Bad Request"
           },
+          "404": {
+            "description": "PAGE NOT FOUND"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       },
       "put": {
+        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -152,7 +192,7 @@
             "description": "Bad Request"
           },
           "404": {
-            "description": "Not Found"
+            "description": "Page Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -160,6 +200,7 @@
         }
       },
       "delete": {
+        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -184,6 +225,7 @@
     },
     "/family/": {
       "get": {
+        "tags": ["Families Collection"],
         "description": "",
         "responses": {
           "200": {
@@ -195,6 +237,7 @@
         }
       },
       "post": {
+        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
@@ -237,6 +280,7 @@
     },
     "/family/{id}": {
       "get": {
+        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
@@ -253,12 +297,16 @@
           "400": {
             "description": "Bad Request"
           },
+          "404": {
+            "description": "PAGE NOT FOUND"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       },
       "put": {
+        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
@@ -303,7 +351,7 @@
             "description": "Bad Request"
           },
           "404": {
-            "description": "Not Found"
+            "description": "Page Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -311,6 +359,7 @@
         }
       },
       "delete": {
+        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
@@ -327,11 +376,15 @@
           "400": {
             "description": "Bad Request"
           },
+         "404": {
+            "description": "Resource Not Found"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       }
     }
+  }
   }
 }
