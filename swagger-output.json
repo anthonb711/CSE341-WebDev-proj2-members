@@ -13,6 +13,9 @@
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "Home"
+        ],
         "description": "",
         "produces": [
           "text/html"
