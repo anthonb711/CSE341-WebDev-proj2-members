@@ -37,7 +37,15 @@
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       }
     },
     "/members/": {
