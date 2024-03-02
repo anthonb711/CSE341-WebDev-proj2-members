@@ -1,5 +1,5 @@
 const ObjectId = require('mongodb').ObjectId;
-const Member = require('../db/memberSchema');
+const Member = require('../config/db/memberSchema');
 
 //GETTERS
 
