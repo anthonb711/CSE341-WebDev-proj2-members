@@ -2,7 +2,9 @@
 
 const getHome = (req, res) => {
     res.setHeader('Content-Type', 'text/html');
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+    res.send("helloWolrd")
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+
   //   const result = validationResult(req); // returns 'true' if no errors are found in the validation
   //   if (result.isEmpty()) {
   //     const data = matchedData(req); // this pulls in all the fields of the query as an obj

@@ -5,45 +5,27 @@
     "description": "Description",
     "version": "1.0.1"
   },
-  "host": "https://agbwebdev-proj2.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
-  "tags": [
-    {
-        "name": "Home",
-        "description": "Home Page"
-    },
-    {
-        "name": "Profile",
-        "description": "User Profile"
-    },
-    {
-        "name": "Members Collection",
-        "description": "Member CRUD Ops"
-    },
-    {
-        "name": "Families Collection",
-        "description": "Family CRUD Ops"
-    }
-],
   "schemes": [
     "https"
   ],
   "paths": {
     "/": {
       "get": {
-        "tags": ["Home"],
         "description": "",
+        "produces": [
+          "text/html"
+        ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": "text/html"
+            "description": "OK"
           }
         }
       }
     },
     "/profile/": {
       "get": {
-        "tags": ["Profile"],
         "description": "",
         "responses": {
           "200": {
@@ -54,7 +36,6 @@
     },
     "/members/": {
       "get": {
-        "tags": ["Members Collection"],
         "description": "",
         "responses": {
           "200": {
@@ -66,7 +47,6 @@
         }
       },
       "post": {
-        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -109,7 +89,6 @@
     },
     "/members/{id}": {
       "get": {
-        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -132,7 +111,6 @@
         }
       },
       "put": {
-        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -185,7 +163,6 @@
         }
       },
       "delete": {
-        "tags": ["Members Collection"],
         "description": "",
         "parameters": [
           {
@@ -210,7 +187,6 @@
     },
     "/family/": {
       "get": {
-        "tags": ["Families Collection"],
         "description": "",
         "responses": {
           "200": {
@@ -222,7 +198,6 @@
         }
       },
       "post": {
-        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
@@ -265,7 +240,6 @@
     },
     "/family/{id}": {
       "get": {
-        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
@@ -288,7 +262,6 @@
         }
       },
       "put": {
-        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
@@ -341,7 +314,6 @@
         }
       },
       "delete": {
-        "tags": ["Families Collection"],
         "description": "",
         "parameters": [
           {
