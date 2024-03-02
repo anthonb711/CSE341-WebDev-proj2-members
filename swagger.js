@@ -6,7 +6,8 @@ const doc = {
     description: 'Description',
     version: '1.0.1'
   },
-  host: 'agbwebdev-proj2.onrender.com',
+  //host: 'agbwebdev-proj2.onrender.com',
+  host: 'https://agbwebdev-proj2.onrender.com',
   schemes: ['https']
 };
 

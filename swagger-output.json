@@ -5,48 +5,37 @@
     "description": "Description",
     "version": "1.0.1"
   },
-  "host": "agbwebdev-proj2.onrender.com",
+  "host": "https://agbwebdev-proj2.onrender.com",
   "basePath": "/",
   "tags": [
     {
-    "name": "Home",
-    "description": "Home Page"
-    },
-     {
-    "name": "Profile",
-    "description": "User Profile Page"
+        "name": "Home",
+        "description": "Home Page"
     },
     {
-    "name": "Members",
-    "description": "Member Collection CRUD OPS"
+        "name": "Profile",
+        "description": "User Profile"
     },
     {
-    "name": "Family",
-    "description": "Families Collection CRUD OPS"
+        "name": "Members Collection",
+        "description": "Member CRUD Ops"
     },
     {
-    "name": "Ordinances",
-    "description": "Families Collection CRUD OPS"
-    },
-    {
-    "name": "Callings",
-    "description": "Callings Collection CRUD OPS"
+        "name": "Families Collection",
+        "description": "Family CRUD Ops"
     }
-  ],
+],
   "schemes": [
     "https"
   ],
   "paths": {
     "/": {
       "get": {
-        "tags" : ["Home"],
-        "description": "Login in Status",
+        "tags": ["Home"],
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "404": {
-            "description": "PAGE NOT FOUND"
           }
         }
       }
@@ -54,14 +43,12 @@
     "/profile/": {
       "get": {
         "tags": ["Profile"],
-        "description": "User Info",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "404": {
-            "description": "PAGE NOT FOUND"
           }
+        }
       }
     },
     "/members/": {
@@ -138,9 +125,6 @@
           "400": {
             "description": "Bad Request"
           },
-          "404": {
-            "description": "PAGE NOT FOUND"
-          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -192,7 +176,7 @@
             "description": "Bad Request"
           },
           "404": {
-            "description": "Page Not Found"
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -297,9 +281,6 @@
           "400": {
             "description": "Bad Request"
           },
-          "404": {
-            "description": "PAGE NOT FOUND"
-          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -351,7 +332,7 @@
             "description": "Bad Request"
           },
           "404": {
-            "description": "Page Not Found"
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -376,15 +357,11 @@
           "400": {
             "description": "Bad Request"
           },
-         "404": {
-            "description": "Resource Not Found"
-          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       }
     }
-  }
   }
 }
