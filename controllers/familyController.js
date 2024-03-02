@@ -4,6 +4,7 @@ const Family = require('../config/db/familySchema');
 //GETTERS
 
 const getFamilies = async (req, res) => {
+    // #swagger.tags = ['Families']
   try {
     const allFamilies = await Family.find();
     res.status(200).json(allFamilies);
@@ -29,6 +30,7 @@ const getFamilyById = async (req, res) => {
 
 // POSTS
 const addFamily = async (req, res) => {
+    // #swagger.tags = ['Families']
   try {
     const { headHousehold, spouse, children, marriageDate, sealingDate, temple } = req.body;
     const family = new Family({
@@ -50,6 +52,7 @@ const addFamily = async (req, res) => {
 // PUTS
 
 const updateFamily = async (req, res) => {
+    // #swagger.tags = ['Families']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
@@ -82,6 +85,7 @@ const updateFamily = async (req, res) => {
 //DELETES
 
 const deleteFamily = async (req, res) => {
+    // #swagger.tags = ['Families']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }

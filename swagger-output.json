@@ -39,6 +39,9 @@
     },
     "/members/": {
       "get": {
+        "tags": [
+          "Members"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -50,6 +53,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Members"
+        ],
         "description": "",
         "parameters": [
           {
@@ -114,6 +120,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Members"
+        ],
         "description": "",
         "parameters": [
           {
@@ -166,6 +175,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Members"
+        ],
         "description": "",
         "parameters": [
           {
@@ -190,6 +202,9 @@
     },
     "/family/": {
       "get": {
+        "tags": [
+          "Families"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -201,6 +216,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Families"
+        ],
         "description": "",
         "parameters": [
           {
@@ -265,6 +283,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Families"
+        ],
         "description": "",
         "parameters": [
           {
@@ -317,6 +338,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Families"
+        ],
         "description": "",
         "parameters": [
           {

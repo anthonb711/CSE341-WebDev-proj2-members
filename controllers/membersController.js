@@ -4,6 +4,7 @@ const Member = require('../config/db/memberSchema');
 //GETTERS
 
 const getMembers = async (req, res) => {
+    // #swagger.tags = ['Members']
   try {
     const allMembers = await Member.find();
     res.status(200).json(allMembers);
@@ -29,6 +30,7 @@ const getMemberById = async (req, res) => {
 
 // POSTS
 const addMember = async (req, res) => {
+    // #swagger.tags = ['Members']
   try {
     const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
     const member = new Member({
@@ -50,6 +52,7 @@ const addMember = async (req, res) => {
 // PUTS
 
 const updateMemberRecord = async (req, res) => {
+    // #swagger.tags = ['Members']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
@@ -82,6 +85,7 @@ const updateMemberRecord = async (req, res) => {
 //DELETES
 
 const deleteMember = async (req, res) => {
+    // #swagger.tags = ['Members']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
