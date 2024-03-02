@@ -29,6 +29,9 @@
     },
     "/profile/": {
       "get": {
+        "tags": [
+          "Profile"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -98,6 +101,9 @@
     },
     "/members/{id}": {
       "get": {
+        "tags": [
+          "Members"
+        ],
         "description": "",
         "parameters": [
           {
@@ -261,6 +267,9 @@
     },
     "/family/{id}": {
       "get": {
+        "tags": [
+          "Families"
+        ],
         "description": "",
         "parameters": [
           {
