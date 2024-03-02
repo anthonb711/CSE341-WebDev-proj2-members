@@ -2,7 +2,8 @@
 
 const getHome = (req, res) => {
       // #swagger.tags = ['Home']
-    res.setHeader('Content-Type', 'text/html');
+      // #swagger.produces = ['text/html']
+    //res.setHeader('Content-Type', 'text/html');
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 
   //   const result = validationResult(req); // returns 'true' if no errors are found in the validation
