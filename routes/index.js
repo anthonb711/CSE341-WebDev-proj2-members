@@ -3,8 +3,6 @@ const controller = require('../controllers/indexController');
 const { auth, requiresAuth } = require('express-openid-connect');
 const config = require('../config/auth0');
 
-//const { query } = require('express-validator');
-
 routes.use(auth(config));
 
 routes.get('/', controller.getHome);

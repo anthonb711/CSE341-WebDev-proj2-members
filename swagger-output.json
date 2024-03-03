@@ -41,8 +41,7 @@
         "security": [
           {
             "OAuth2": [
-              "read",
-              "write"
+              "read"
             ]
           }
         ]
@@ -76,22 +75,22 @@
               "type": "object",
               "properties": {
                 "lname": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "fname": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "gender": {
-                  "example": "any"
+                  "example": "['M', 'F']"
                 },
                 "age": {
-                  "example": "any"
+                  "example": "<number>"
                 },
                 "lastPrayer": {
-                  "example": "any"
+                  "example": "<date>"
                 },
                 "lastTalk": {
-                  "example": "any"
+                  "example": "<date>"
                 }
               }
             }
