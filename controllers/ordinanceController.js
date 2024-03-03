@@ -51,14 +51,12 @@ const addOrdinance = async (req, res) => {
             ]
     }] */
   try {
-    const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
+    const { MRN, name, performedBy, date } = req.body;
     const ordinance = new Ordinance({
-      lname,
-      fname,
-      gender,
-      age,
-      lastPrayer,
-      lastTalk
+      MRN,
+      name,
+      performedBy,
+      date
     });
 
     const insertedOrdinance = await ordinance.save();
@@ -84,16 +82,14 @@ const updateOrdinance = async (req, res) => {
   const ordinanceId = new ObjectId(req.params.id);
   console.log(req.params.id);
   try {
-    const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
+    const { MRN, name, performedBy, date } = req.body;
     const ordinanceUpdate = await Ordinance.findOneAndUpdate(
       { _id: ordinanceId },
       {
-        lname,
-        fname,
-        gender,
-        age,
-        lastPrayer,
-        lastTalk
+        MRN,
+         name,
+        performedBy,
+        date
       },
       { new: true }
     );

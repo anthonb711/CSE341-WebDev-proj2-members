@@ -494,22 +494,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "lname": {
+                "MRN": {
                   "example": "any"
                 },
-                "fname": {
+                "name": {
                   "example": "any"
                 },
-                "gender": {
+                "performedBy": {
                   "example": "any"
                 },
-                "age": {
-                  "example": "any"
-                },
-                "lastPrayer": {
-                  "example": "any"
-                },
-                "lastTalk": {
+                "date": {
                   "example": "any"
                 }
               }
@@ -586,22 +580,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "lname": {
+                "MRN": {
                   "example": "any"
                 },
-                "fname": {
+                "name": {
                   "example": "any"
                 },
-                "gender": {
+                "performedBy": {
                   "example": "any"
                 },
-                "age": {
-                  "example": "any"
-                },
-                "lastPrayer": {
-                  "example": "any"
-                },
-                "lastTalk": {
+                "date": {
                   "example": "any"
                 }
               }
