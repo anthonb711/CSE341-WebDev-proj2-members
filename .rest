@@ -27,10 +27,11 @@ POST http://localhost:8080/members HTTP/1.
 Content-Type: application/json
 
 {
-  "lname": "Weiss",
-  "fname": "Mina",
-  "gender": "F",
-  "age": "6",
+  "lname": "Anthon",
+  "fname": "Brown",
+  "gender": "M",
+  "age": "32",
+  "active": "Y",
   "lastPrayer": "2024-02-10T12:00:00Z",
   "lastTalk": "2017-08-13T12:00:00Z"
 }

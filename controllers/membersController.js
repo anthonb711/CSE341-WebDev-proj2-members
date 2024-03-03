@@ -51,12 +51,13 @@ const addMember = async (req, res) => {
             ]
     }] */
   try {
-    const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
+    const { lname, fname, gender, age, active, lastPrayer, lastTalk } = req.body;
     const member = new Member({
       lname,
       fname,
       gender,
       age,
+      active,
       lastPrayer,
       lastTalk
     });
@@ -84,7 +85,7 @@ const updateMemberRecord = async (req, res) => {
   const memberId = new ObjectId(req.params.id);
   console.log(req.params.id);
   try {
-    const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
+    const { lname, fname, gender, age, active, lastPrayer, lastTalk } = req.body;
     const memberUpdate = await Member.findOneAndUpdate(
       { _id: memberId },
       {
@@ -92,6 +93,7 @@ const updateMemberRecord = async (req, res) => {
         fname,
         gender,
         age,
+        active,
         lastPrayer,
         lastTalk
       },

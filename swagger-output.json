@@ -94,6 +94,9 @@
                 "age": {
                   "example": "any"
                 },
+                "active": {
+                  "example": "any"
+                },
                 "lastPrayer": {
                   "example": "any"
                 },
@@ -184,6 +187,9 @@
                   "example": "any"
                 },
                 "age": {
+                  "example": "any"
+                },
+                "active": {
                   "example": "any"
                 },
                 "lastPrayer": {
