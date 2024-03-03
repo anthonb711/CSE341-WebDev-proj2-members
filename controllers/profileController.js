@@ -2,8 +2,7 @@ const getProfile = (req, res) => {
     // #swagger.tags = ['Profile']
     /* #swagger.security = [{
             "OAuth2": [
-                'read', 
-                'write'
+                'read'
             ]
     }] */
   res.send(JSON.stringify(req.oidc.user));
