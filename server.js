@@ -8,15 +8,12 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-
-
 // Middleware
 app
   .use(cors())
   .use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc))
   .use(express.json())
   .use(express.urlencoded({ extended: true }));
-
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');

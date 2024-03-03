@@ -4,8 +4,8 @@ const Member = require('../config/db/memberSchema');
 //GETTERS
 
 const getMembers = async (req, res) => {
-    // #swagger.tags = ['Members']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Members']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -21,8 +21,8 @@ const getMembers = async (req, res) => {
 };
 
 const getMemberById = async (req, res) => {
-    // #swagger.tags = ['Members']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Members']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -43,8 +43,8 @@ const getMemberById = async (req, res) => {
 
 // POSTS
 const addMember = async (req, res) => {
-    // #swagger.tags = ['Members']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Members']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -72,8 +72,8 @@ const addMember = async (req, res) => {
 // PUTS
 
 const updateMemberRecord = async (req, res) => {
-    // #swagger.tags = ['Members']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Members']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -112,8 +112,8 @@ const updateMemberRecord = async (req, res) => {
 //DELETES
 
 const deleteMember = async (req, res) => {
-    // #swagger.tags = ['Members']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Members']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'

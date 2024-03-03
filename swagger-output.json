@@ -83,25 +83,25 @@
               "type": "object",
               "properties": {
                 "lname": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "fname": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "gender": {
-                  "example": "any"
+                  "example": "<'M' or 'F'>"
                 },
                 "age": {
-                  "example": "any"
+                  "example": "<int>"
                 },
                 "active": {
-                  "example": "any"
+                  "example": "<'Y' or 'N'>"
                 },
                 "lastPrayer": {
-                  "example": "any"
+                  "example": "<date>"
                 },
                 "lastTalk": {
-                  "example": "any"
+                  "example": "<date>"
                 }
               }
             }
@@ -178,25 +178,25 @@
               "type": "object",
               "properties": {
                 "lname": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "fname": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "gender": {
-                  "example": "any"
+                  "example": "<'M' or 'F'>"
                 },
                 "age": {
-                  "example": "any"
+                  "example": "<int>"
                 },
                 "active": {
-                  "example": "any"
+                  "example": "<'Y' or 'N'>"
                 },
                 "lastPrayer": {
-                  "example": "any"
+                  "example": "<date>"
                 },
                 "lastTalk": {
-                  "example": "any"
+                  "example": "<date>"
                 }
               }
             }
@@ -295,22 +295,22 @@
               "type": "object",
               "properties": {
                 "headHousehold": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "spouse": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "children": {
-                  "example": "any"
+                  "example": "['<string>', '<string>', ....]"
                 },
                 "marriageDate": {
-                  "example": "any"
+                  "example": "<date>"
                 },
                 "sealingDate": {
-                  "example": "any"
+                  "example": "<date>"
                 },
                 "temple": {
-                  "example": "any"
+                  "example": "enmun [<temple name string no comma>]"
                 }
               }
             }
@@ -387,22 +387,22 @@
               "type": "object",
               "properties": {
                 "headHousehold": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "spouse": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "children": {
-                  "example": "any"
+                  "example": "['<string>', '<string>', ....]"
                 },
                 "marriageDate": {
-                  "example": "any"
+                  "example": "<date>"
                 },
                 "sealingDate": {
-                  "example": "any"
+                  "example": "<date>"
                 },
                 "temple": {
-                  "example": "any"
+                  "example": "enmun [<temple name string no comma>]"
                 }
               }
             }
@@ -479,14 +479,7 @@
             "description": "Internal Server Error"
           }
         },
-        "security": [
-          {
-            "OAuth2": [
-              "read",
-              "write"
-            ]
-          }
-        ]
+        "security": []
       },
       "post": {
         "tags": [
@@ -501,16 +494,16 @@
               "type": "object",
               "properties": {
                 "MRN": {
-                  "example": "any"
+                  "example": "<Number>"
                 },
                 "name": {
-                  "example": "any"
+                  "example": "<enum[<string ordinance name>]>"
                 },
                 "performedBy": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "date": {
-                  "example": "any"
+                  "example": "<date>"
                 }
               }
             }
@@ -587,16 +580,16 @@
               "type": "object",
               "properties": {
                 "MRN": {
-                  "example": "any"
+                  "example": "<Number>"
                 },
                 "name": {
-                  "example": "any"
+                  "example": "<enum[<string ordinance name>]>"
                 },
                 "performedBy": {
-                  "example": "any"
+                  "example": "<string>"
                 },
                 "date": {
-                  "example": "any"
+                  "example": "<date>"
                 }
               }
             }

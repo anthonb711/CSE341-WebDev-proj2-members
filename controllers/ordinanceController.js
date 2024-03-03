@@ -4,10 +4,10 @@ const Ordinance = require('../config/db/memberSchema');
 //GETTERS
 
 const getOrdinances = async (req, res) => {
-    // #swagger.tags = ['Ordinances']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Ordinances']
+  /* #swagger.security = [{
             "OAuth2": [
-                'read', 
+                'read' 
                 'write'
             ]
     }] */
@@ -21,8 +21,8 @@ const getOrdinances = async (req, res) => {
 };
 
 const getOrdinanceById = async (req, res) => {
-    // #swagger.tags = ['Ordinances']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Ordinances']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -43,8 +43,8 @@ const getOrdinanceById = async (req, res) => {
 
 // POSTS
 const addOrdinance = async (req, res) => {
-    // #swagger.tags = ['Ordinances']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Ordinances']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -69,8 +69,8 @@ const addOrdinance = async (req, res) => {
 // PUTS
 
 const updateOrdinance = async (req, res) => {
-    // #swagger.tags = ['Ordinances']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Ordinances']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -87,13 +87,13 @@ const updateOrdinance = async (req, res) => {
       { _id: ordinanceId },
       {
         MRN,
-         name,
+        name,
         performedBy,
         date
       },
       { new: true }
     );
-    if (!memberUpdate) {
+    if (!ordinanceUpdate) {
       return res.status(404).json({ error: 'Ordinance not found' });
     }
 
@@ -106,8 +106,8 @@ const updateOrdinance = async (req, res) => {
 //DELETES
 
 const deleteOrdinance = async (req, res) => {
-    // #swagger.tags = ['Ordinances']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Ordinances']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -132,4 +132,4 @@ module.exports = {
   addOrdinance,
   updateOrdinance,
   deleteOrdinance
-}
+};

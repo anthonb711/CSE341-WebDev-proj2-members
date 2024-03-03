@@ -1,4 +1,4 @@
-const { auth } = require('express-openid-connect');
+//const { auth } = require('express-openid-connect');
 
 const config = {
   authRequired: false,
@@ -9,4 +9,4 @@ const config = {
   issuerBaseURL: process.env.ISSUER_BASE_URL
 };
 
-module.exports =  config ;
+module.exports = config;

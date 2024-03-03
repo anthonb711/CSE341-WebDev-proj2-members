@@ -4,8 +4,8 @@ const Family = require('../config/db/familySchema');
 //GETTERS
 
 const getFamilies = async (req, res) => {
-    // #swagger.tags = ['Families']
-     /* #swagger.security = [{
+  // #swagger.tags = ['Families']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -21,8 +21,8 @@ const getFamilies = async (req, res) => {
 };
 
 const getFamilyById = async (req, res) => {
-    // #swagger.tags = ['Families']
-     /* #swagger.security = [{
+  // #swagger.tags = ['Families']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -43,8 +43,8 @@ const getFamilyById = async (req, res) => {
 
 // POSTS
 const addFamily = async (req, res) => {
-    // #swagger.tags = ['Families']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Families']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -71,8 +71,8 @@ const addFamily = async (req, res) => {
 // PUTS
 
 const updateFamily = async (req, res) => {
-    // #swagger.tags = ['Families']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Families']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
@@ -110,8 +110,8 @@ const updateFamily = async (req, res) => {
 //DELETES
 
 const deleteFamily = async (req, res) => {
-    // #swagger.tags = ['Families']
-    /* #swagger.security = [{
+  // #swagger.tags = ['Families']
+  /* #swagger.security = [{
             "OAuth2": [
                 'read', 
                 'write'
