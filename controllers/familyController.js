@@ -5,6 +5,12 @@ const Family = require('../config/db/familySchema');
 
 const getFamilies = async (req, res) => {
     // #swagger.tags = ['Families']
+     /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   try {
     const allFamilies = await Family.find();
     res.status(200).json(allFamilies);
@@ -16,6 +22,12 @@ const getFamilies = async (req, res) => {
 
 const getFamilyById = async (req, res) => {
     // #swagger.tags = ['Families']
+     /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
@@ -32,6 +44,12 @@ const getFamilyById = async (req, res) => {
 // POSTS
 const addFamily = async (req, res) => {
     // #swagger.tags = ['Families']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   try {
     const { headHousehold, spouse, children, marriageDate, sealingDate, temple } = req.body;
     const family = new Family({
@@ -54,6 +72,12 @@ const addFamily = async (req, res) => {
 
 const updateFamily = async (req, res) => {
     // #swagger.tags = ['Families']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
@@ -87,6 +111,12 @@ const updateFamily = async (req, res) => {
 
 const deleteFamily = async (req, res) => {
     // #swagger.tags = ['Families']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }

@@ -3,7 +3,7 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'MEMBERS API',
-    description: 'Description',
+    description: 'API to access member information related to themselves and their families',
     version: '1.0.1'
   },
   host: 'agbwebdev-proj2.onrender.com',

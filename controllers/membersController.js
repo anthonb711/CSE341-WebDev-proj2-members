@@ -5,6 +5,12 @@ const Member = require('../config/db/memberSchema');
 
 const getMembers = async (req, res) => {
     // #swagger.tags = ['Members']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   try {
     const allMembers = await Member.find();
     res.status(200).json(allMembers);
@@ -16,6 +22,12 @@ const getMembers = async (req, res) => {
 
 const getMemberById = async (req, res) => {
     // #swagger.tags = ['Members']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
@@ -32,6 +44,12 @@ const getMemberById = async (req, res) => {
 // POSTS
 const addMember = async (req, res) => {
     // #swagger.tags = ['Members']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   try {
     const { lname, fname, gender, age, lastPrayer, lastTalk } = req.body;
     const member = new Member({
@@ -54,6 +72,12 @@ const addMember = async (req, res) => {
 
 const updateMemberRecord = async (req, res) => {
     // #swagger.tags = ['Members']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }
@@ -87,6 +111,12 @@ const updateMemberRecord = async (req, res) => {
 
 const deleteMember = async (req, res) => {
     // #swagger.tags = ['Members']
+    /* #swagger.security = [{
+            "OAuth2": [
+                'read', 
+                'write'
+            ]
+    }] */
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Invalid ID');
   }

@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "MEMBERS API",
-    "description": "Description",
+    "description": "API to access member information related to themselves and their families",
     "version": "1.0.1"
   },
   "host": "agbwebdev-proj2.onrender.com",
@@ -41,7 +41,8 @@
         "security": [
           {
             "OAuth2": [
-              "read"
+              "read",
+              "write"
             ]
           }
         ]
@@ -60,7 +61,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -75,22 +84,22 @@
               "type": "object",
               "properties": {
                 "lname": {
-                  "example": "<string>"
+                  "example": "any"
                 },
                 "fname": {
-                  "example": "<string>"
+                  "example": "any"
                 },
                 "gender": {
-                  "example": "['M', 'F']"
+                  "example": "any"
                 },
                 "age": {
-                  "example": "<number>"
+                  "example": "any"
                 },
                 "lastPrayer": {
-                  "example": "<date>"
+                  "example": "any"
                 },
                 "lastTalk": {
-                  "example": "<date>"
+                  "example": "any"
                 }
               }
             }
@@ -103,7 +112,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       }
     },
     "/members/{id}": {
@@ -130,7 +147,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       },
       "put": {
         "tags": [
@@ -185,7 +210,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -210,7 +243,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       }
     },
     "/family/": {
@@ -226,7 +267,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -269,7 +318,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       }
     },
     "/family/{id}": {
@@ -296,7 +353,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       },
       "put": {
         "tags": [
@@ -351,7 +416,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -376,7 +449,15 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read",
+              "write"
+            ]
+          }
+        ]
       }
     }
   }
